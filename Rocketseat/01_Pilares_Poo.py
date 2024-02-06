@@ -49,4 +49,9 @@ class BankAccount:
 
 bank_account = BankAccount(balance=1000)
 print(f"Saldo da conta bancária: {bank_account.check_balance()}")
-bank_account.deposit(value=500)  # Corrigi a chamada do método deposit
+bank_account.deposit(value=500) 
+print(f"Saldo da conta bancária: {bank_account.check_balance()}")
+bank_account.deposit(value=-500) 
+print(f"Saldo da conta bancária: {bank_account.check_balance()}")
+bank_account.withdraw(value=200) 
+print(f"Saldo da conta bancária: {bank_account.check_balance()}")
