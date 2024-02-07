@@ -55,3 +55,29 @@ bank_account.deposit(value=-500)
 print(f"Saldo da conta bancária: {bank_account.check_balance()}")
 bank_account.withdraw(value=200) 
 print(f"Saldo da conta bancária: {bank_account.check_balance()}")
+
+friend_account = BankAccount(balance=50)
+print("\nExemplo de abstração:")
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+    @abstractmethod #decorador
+    def turn_on(self):
+        pass
+    
+    @abstractmethod #decorador
+    def turn_off(self):
+        pass
+    
+class Car(Vehicle):
+    def __init__(self) -> None:
+        pass
+    
+    def turn_on(self):
+        return "Carro ligado usando a chave"
+    def turn_off(self):
+        return "Carro desligado usando a chave"
+    
+yellow_car = Car()
+print(yellow_car.turn_on())
+print(yellow_car.turn_off())
